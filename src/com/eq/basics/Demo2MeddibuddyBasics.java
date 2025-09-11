@@ -34,7 +34,7 @@ public class Demo2MeddibuddyBasics {
 		
 		driver.findElement(By.id("phone")).sendKeys("38838747");
 		
-		
+		driver.findElement(By.xpath("//a[text()='Login']")).click();
 
 	}
 
