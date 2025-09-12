@@ -19,7 +19,7 @@ public class Demo2MeddibuddyBasics {
 		
 		driver.get("https://www.medibuddy.in/");  //wait for page load to complete
 		
-		//findElement checks for the locator in 0.5s (500ms) 
+		//findElement checks for the presence of locator in 0.5s (500ms) 
 		
 		
 //		By locator= By.linkText("Login");
