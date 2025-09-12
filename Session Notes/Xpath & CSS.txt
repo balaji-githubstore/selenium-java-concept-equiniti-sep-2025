@@ -1,0 +1,42 @@
+Xpath 
+
+Absolute xpath (Not recommended) - /html/body/section[2]/div/div/div/div[2]/div/form/div[2]/div[3]/div/div/input
+Relative xpath - 
+
+//tagname[@attribute='']
+//tagname[text()='']
+//tagname[normalize-space()='']
+
+Contains
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]
+
+Grouping of xpath - starts at 1 
+(//div[@class='checkbox-ui'])[2]
+
+
+And-or 
+//tagname[@attribute='' and @attribute='']
+//tagname[@attribute='' and text()='']
+//input[@type='file' and @id='edit-field-audited-balance-sheet-for-0-upload']
+
+parent-child
+parent - //img[@alt='Go']/..
+
+ancestor - descendant 
+
+following-preceding
+
+following-sibling
+
+
+Example: verify it in chrome --> ctrl+f
+
+//input[@placeholder='Company Name in India*']
+//button[text()='Login']
+//input[@data-cs-override-id='UserLastName']
+//input[contains(@id,'UserLastName')]
+
+
+//frame[@name='login_page']
+//frame[contains(@src,'RSNBLogin')]
