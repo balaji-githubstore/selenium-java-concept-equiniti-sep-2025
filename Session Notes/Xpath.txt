@@ -1,0 +1,110 @@
+XPATH - 
+
+Absolute XPath (not recommended) - /html/body/div[1]/div[1]/div[1]/div/div/div/div[2]/div/div[1]/form/div[1]/div[1]/input
+Relative XPath - 
+
+//tagname[@attribute='']
+//tagname[text()='']
+
+normalize-space() --> removes white space
+//tagname[normalize-space()='']
+
+Contains
+//tagname[contains(@attribute,'')]
+//tagname[contains(text(),'')]   --> white space may not work
+//tagname[contains(normalize-space(),'')]
+
+
+Grouping of xpath - starts at 1
+(//div[@class='checkbox-ui'])[2]
+
+
+And-Or 
+//tagname[@attribute='' and @attribute='']
+//div[contains(normalize-space(),'MySQL') and @role='alert']
+
+
+Upload 
+//input[@type='file']
+
+
+
+Following - preceding 
+
+following 
+//input[@name='UserEmail']/following::div[@class='checkbox-ui']
+(//input[@name='UserEmail']/following::div[@class='checkbox-ui'])[1]
+
+parent - child 
+
+child - 
+
+
+ancestor - descendant 
+
+
+following sibling 
+
+
+
+Example: verify in chrome -- ctrl+f 
+//input[@id='email']
+//input[@id='pass']
+
+//button[@name='login']
+
+
+//button[text()='Log in']
+//button[normalize-space()='Log in']
+
+//input[@name='UserFirstName']
+
+//input[contains(@id,'UserLastName')]
+
+
+//div[@class='checkbox-ui']
+
+
+(//div[@class='checkbox-ui'])[2]
+
+
+(//input[@name='UserEmail']/following::div[@class='checkbox-ui'])[1]
+
+
+//span[contains(text(),'valid phone')]
+
+//span[contains(text(),'your free sales')]
+
+
+//div[normalize-space()='My Account']
+
+//frame[contains(@src,'RSNBLogin')]
+
+----------------------------------------------
+CSS selector 
+
+#id 
+.classname
+tagname[attribute='']
+[attribute='']
+
+Example:
+
+button[title='Show me an Agentforce demo']
+
+
+
+
+
+
+document.querySelector("body > page-builder-miaw-ui").shadowRoot.querySelector("div > form > fieldset > div.wes\\:text-white.wes\\:pb-3.wes\\:md\\:max-lg\\:hidden.wes\\:lg\\:w-\\[808px\\].wes\\:lg\\:whitespace-nowrap.wes\\:lg\\:overflow-x-auto.wes\\:lg\\:overflow-y-hidden > div > div:nth-child(1) > button")
+
+
+
+Row count - //table[@id='example']/tbody/tr
+
+col count - //table[@id='example']/tbody/tr[1]/td
+
+
+
+
