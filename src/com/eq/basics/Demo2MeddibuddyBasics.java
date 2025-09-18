@@ -22,9 +22,9 @@ public class Demo2MeddibuddyBasics {
 		//findElement checks for the presence of locator in 0.5s (500ms) 
 		
 		
-//		By locator= By.linkText("Login");
-//		WebElement element= driver.findElement(locator);
-//		element.click();
+		By locator= By.linkText("Login");
+		WebElement element= driver.findElement(locator);
+		element.click();
 		
 
 //		WebElement element= driver.findElement(By.linkText("Login"));

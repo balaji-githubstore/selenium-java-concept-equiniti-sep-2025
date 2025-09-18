@@ -1,9 +1,12 @@
 package com.eq.advance;
 
+import java.io.File;
 import java.time.Duration;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
@@ -18,12 +21,17 @@ public class Demo4Actions {
 		
 		driver.get("https://google.com");
 		
-		Actions actions=new Actions(driver);
+//		Actions actions=new Actions(driver);
+//		
+//		actions.moveToElement(driver.findElement(By.name("q"))).click()
+//		.keyDown(Keys.SHIFT).sendKeys("hello world").keyUp(Keys.SHIFT).pause(1000)
+//		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).pause(1000)
+//		.sendKeys(Keys.ENTER).perform();
+//		
+		TakesScreenshot ts=(TakesScreenshot) driver;
+		File file= ts.getScreenshotAs(OutputType.FILE);
+		file.renameTo(new File("error.png"));
 		
-		actions.moveToElement(driver.findElement(By.name("q"))).click()
-		.keyDown(Keys.SHIFT).sendKeys("hello world").keyUp(Keys.SHIFT).pause(1000)
-		.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.ARROW_DOWN).pause(1000)
-		.sendKeys(Keys.ENTER).perform();
 		
 	}
 
