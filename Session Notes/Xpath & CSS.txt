@@ -23,7 +23,16 @@ And-or
 parent-child
 parent - //img[@alt='Go']/..
 
+child - //table[@id='example']/tbody/tr[1]/td[2]
+
 ancestor - descendant 
+//img[@alt='Go']/ancestor::a
+
+//a[@id="main"]/descendant::img
+
+//a[@id="main"]//img
+//a[@id="main"]//img[@alt='Go']
+
 
 following-preceding
 
@@ -40,3 +49,26 @@ Example: verify it in chrome --> ctrl+f
 
 //frame[@name='login_page']
 //frame[contains(@src,'RSNBLogin')]
+
+
+//button[contains(normalize-space(),'Login')]
+//button[normalize-space()='Login']
+
+
+-----------------------------------------------
+
+CSS Selector - https://www.w3schools.com/cssref/css_selectors.php
+
+#id 
+.classname
+tagname[attribute='']
+[attribute='']
+
+Example:
+button[name='login']
+
+
+
+
+
+
